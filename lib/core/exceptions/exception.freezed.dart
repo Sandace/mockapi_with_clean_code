@@ -19,21 +19,21 @@ mixin _$Exception {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatException,
-    required TResult Function() ServerException,
+    required TResult Function() serverException,
     required TResult Function() noInternetException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
     required TResult orElse(),
   }) =>
@@ -41,21 +41,21 @@ mixin _$Exception {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatException value) jsonFormatException,
-    required TResult Function(_ServerException value) ServerException,
+    required TResult Function(_ServerException value) serverException,
     required TResult Function(_NoInternetException value) noInternetException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
     required TResult orElse(),
   }) =>
@@ -119,7 +119,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatException,
-    required TResult Function() ServerException,
+    required TResult Function() serverException,
     required TResult Function() noInternetException,
   }) {
     return jsonFormatException();
@@ -129,7 +129,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
   }) {
     return jsonFormatException?.call();
@@ -139,7 +139,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
     required TResult orElse(),
   }) {
@@ -153,7 +153,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatException value) jsonFormatException,
-    required TResult Function(_ServerException value) ServerException,
+    required TResult Function(_ServerException value) serverException,
     required TResult Function(_NoInternetException value) noInternetException,
   }) {
     return jsonFormatException(this);
@@ -163,7 +163,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
   }) {
     return jsonFormatException?.call(this);
@@ -173,7 +173,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
     required TResult orElse(),
   }) {
@@ -214,7 +214,7 @@ class _$_ServerException implements _ServerException {
 
   @override
   String toString() {
-    return 'Exception.ServerException()';
+    return 'Exception.serverException()';
   }
 
   @override
@@ -230,32 +230,32 @@ class _$_ServerException implements _ServerException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatException,
-    required TResult Function() ServerException,
+    required TResult Function() serverException,
     required TResult Function() noInternetException,
   }) {
-    return ServerException();
+    return serverException();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
   }) {
-    return ServerException?.call();
+    return serverException?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
     required TResult orElse(),
   }) {
-    if (ServerException != null) {
-      return ServerException();
+    if (serverException != null) {
+      return serverException();
     }
     return orElse();
   }
@@ -264,32 +264,32 @@ class _$_ServerException implements _ServerException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatException value) jsonFormatException,
-    required TResult Function(_ServerException value) ServerException,
+    required TResult Function(_ServerException value) serverException,
     required TResult Function(_NoInternetException value) noInternetException,
   }) {
-    return ServerException(this);
+    return serverException(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
   }) {
-    return ServerException?.call(this);
+    return serverException?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
     required TResult orElse(),
   }) {
-    if (ServerException != null) {
-      return ServerException(this);
+    if (serverException != null) {
+      return serverException(this);
     }
     return orElse();
   }
@@ -341,7 +341,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatException,
-    required TResult Function() ServerException,
+    required TResult Function() serverException,
     required TResult Function() noInternetException,
   }) {
     return noInternetException();
@@ -351,7 +351,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
   }) {
     return noInternetException?.call();
@@ -361,7 +361,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatException,
-    TResult Function()? ServerException,
+    TResult Function()? serverException,
     TResult Function()? noInternetException,
     required TResult orElse(),
   }) {
@@ -375,7 +375,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatException value) jsonFormatException,
-    required TResult Function(_ServerException value) ServerException,
+    required TResult Function(_ServerException value) serverException,
     required TResult Function(_NoInternetException value) noInternetException,
   }) {
     return noInternetException(this);
@@ -385,7 +385,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
   }) {
     return noInternetException?.call(this);
@@ -395,7 +395,7 @@ class _$_NoInternetException implements _NoInternetException {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatException value)? jsonFormatException,
-    TResult Function(_ServerException value)? ServerException,
+    TResult Function(_ServerException value)? serverException,
     TResult Function(_NoInternetException value)? noInternetException,
     required TResult orElse(),
   }) {

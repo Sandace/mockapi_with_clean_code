@@ -19,21 +19,21 @@ mixin _$ApiFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatError,
-    required TResult Function() ServerError,
+    required TResult Function() serverError,
     required TResult Function() noInternetError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
     required TResult orElse(),
   }) =>
@@ -41,21 +41,21 @@ mixin _$ApiFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatError value) jsonFormatError,
-    required TResult Function(_ServerError value) ServerError,
+    required TResult Function(_ServerError value) serverError,
     required TResult Function(_NoInternetError value) noInternetError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
     required TResult orElse(),
   }) =>
@@ -120,7 +120,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatError,
-    required TResult Function() ServerError,
+    required TResult Function() serverError,
     required TResult Function() noInternetError,
   }) {
     return jsonFormatError();
@@ -130,7 +130,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
   }) {
     return jsonFormatError?.call();
@@ -140,7 +140,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
     required TResult orElse(),
   }) {
@@ -154,7 +154,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatError value) jsonFormatError,
-    required TResult Function(_ServerError value) ServerError,
+    required TResult Function(_ServerError value) serverError,
     required TResult Function(_NoInternetError value) noInternetError,
   }) {
     return jsonFormatError(this);
@@ -164,7 +164,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
   }) {
     return jsonFormatError?.call(this);
@@ -174,7 +174,7 @@ class _$_JsonFormatError implements _JsonFormatError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
     required TResult orElse(),
   }) {
@@ -214,7 +214,7 @@ class _$_ServerError implements _ServerError {
 
   @override
   String toString() {
-    return 'ApiFailure.ServerError()';
+    return 'ApiFailure.serverError()';
   }
 
   @override
@@ -230,32 +230,32 @@ class _$_ServerError implements _ServerError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatError,
-    required TResult Function() ServerError,
+    required TResult Function() serverError,
     required TResult Function() noInternetError,
   }) {
-    return ServerError();
+    return serverError();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
   }) {
-    return ServerError?.call();
+    return serverError?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
     required TResult orElse(),
   }) {
-    if (ServerError != null) {
-      return ServerError();
+    if (serverError != null) {
+      return serverError();
     }
     return orElse();
   }
@@ -264,32 +264,32 @@ class _$_ServerError implements _ServerError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatError value) jsonFormatError,
-    required TResult Function(_ServerError value) ServerError,
+    required TResult Function(_ServerError value) serverError,
     required TResult Function(_NoInternetError value) noInternetError,
   }) {
-    return ServerError(this);
+    return serverError(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
   }) {
-    return ServerError?.call(this);
+    return serverError?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
     required TResult orElse(),
   }) {
-    if (ServerError != null) {
-      return ServerError(this);
+    if (serverError != null) {
+      return serverError(this);
     }
     return orElse();
   }
@@ -341,7 +341,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatError,
-    required TResult Function() ServerError,
+    required TResult Function() serverError,
     required TResult Function() noInternetError,
   }) {
     return noInternetError();
@@ -351,7 +351,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
   }) {
     return noInternetError?.call();
@@ -361,7 +361,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? jsonFormatError,
-    TResult Function()? ServerError,
+    TResult Function()? serverError,
     TResult Function()? noInternetError,
     required TResult orElse(),
   }) {
@@ -375,7 +375,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_JsonFormatError value) jsonFormatError,
-    required TResult Function(_ServerError value) ServerError,
+    required TResult Function(_ServerError value) serverError,
     required TResult Function(_NoInternetError value) noInternetError,
   }) {
     return noInternetError(this);
@@ -385,7 +385,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
   }) {
     return noInternetError?.call(this);
@@ -395,7 +395,7 @@ class _$_NoInternetError implements _NoInternetError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_JsonFormatError value)? jsonFormatError,
-    TResult Function(_ServerError value)? ServerError,
+    TResult Function(_ServerError value)? serverError,
     TResult Function(_NoInternetError value)? noInternetError,
     required TResult orElse(),
   }) {
