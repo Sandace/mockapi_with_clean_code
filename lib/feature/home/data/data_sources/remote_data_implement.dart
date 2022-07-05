@@ -37,7 +37,7 @@ class RemoteDataImpl extends RemoteDataSource {
         print(e.message);
       }
 
-      throw Exception.serverException();
+      throw AppException.serverException();
     }
   }
 }

@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'exception.freezed.dart';
 
 @freezed
-class Exception with _$Exception {
-  factory Exception.jsonFormatException() = _JsonFormatException;
-  factory Exception.serverException() = _ServerException;
-  factory Exception.noInternetException() = _NoInternetException;
+class AppException with _$AppException {
+  factory AppException.jsonFormatException() = _JsonFormatException;
+  factory AppException.serverException() = _ServerException;
+  factory AppException.noInternetException() = _NoInternetException;
 }

@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$Exception {
+mixin _$AppException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() jsonFormatException,
@@ -63,18 +63,19 @@ mixin _$Exception {
 }
 
 /// @nodoc
-abstract class $ExceptionCopyWith<$Res> {
-  factory $ExceptionCopyWith(Exception value, $Res Function(Exception) then) =
-      _$ExceptionCopyWithImpl<$Res>;
+abstract class $AppExceptionCopyWith<$Res> {
+  factory $AppExceptionCopyWith(
+          AppException value, $Res Function(AppException) then) =
+      _$AppExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ExceptionCopyWithImpl<$Res> implements $ExceptionCopyWith<$Res> {
-  _$ExceptionCopyWithImpl(this._value, this._then);
+class _$AppExceptionCopyWithImpl<$Res> implements $AppExceptionCopyWith<$Res> {
+  _$AppExceptionCopyWithImpl(this._value, this._then);
 
-  final Exception _value;
+  final AppException _value;
   // ignore: unused_field
-  final $Res Function(Exception) _then;
+  final $Res Function(AppException) _then;
 }
 
 /// @nodoc
@@ -86,7 +87,7 @@ abstract class _$$_JsonFormatExceptionCopyWith<$Res> {
 
 /// @nodoc
 class __$$_JsonFormatExceptionCopyWithImpl<$Res>
-    extends _$ExceptionCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
     implements _$$_JsonFormatExceptionCopyWith<$Res> {
   __$$_JsonFormatExceptionCopyWithImpl(_$_JsonFormatException _value,
       $Res Function(_$_JsonFormatException) _then)
@@ -103,7 +104,7 @@ class _$_JsonFormatException implements _JsonFormatException {
 
   @override
   String toString() {
-    return 'Exception.jsonFormatException()';
+    return 'AppException.jsonFormatException()';
   }
 
   @override
@@ -184,7 +185,7 @@ class _$_JsonFormatException implements _JsonFormatException {
   }
 }
 
-abstract class _JsonFormatException implements Exception {
+abstract class _JsonFormatException implements AppException {
   factory _JsonFormatException() = _$_JsonFormatException;
 }
 
@@ -197,7 +198,7 @@ abstract class _$$_ServerExceptionCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ServerExceptionCopyWithImpl<$Res>
-    extends _$ExceptionCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
     implements _$$_ServerExceptionCopyWith<$Res> {
   __$$_ServerExceptionCopyWithImpl(
       _$_ServerException _value, $Res Function(_$_ServerException) _then)
@@ -214,7 +215,7 @@ class _$_ServerException implements _ServerException {
 
   @override
   String toString() {
-    return 'Exception.serverException()';
+    return 'AppException.serverException()';
   }
 
   @override
@@ -295,7 +296,7 @@ class _$_ServerException implements _ServerException {
   }
 }
 
-abstract class _ServerException implements Exception {
+abstract class _ServerException implements AppException {
   factory _ServerException() = _$_ServerException;
 }
 
@@ -308,7 +309,7 @@ abstract class _$$_NoInternetExceptionCopyWith<$Res> {
 
 /// @nodoc
 class __$$_NoInternetExceptionCopyWithImpl<$Res>
-    extends _$ExceptionCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
     implements _$$_NoInternetExceptionCopyWith<$Res> {
   __$$_NoInternetExceptionCopyWithImpl(_$_NoInternetException _value,
       $Res Function(_$_NoInternetException) _then)
@@ -325,7 +326,7 @@ class _$_NoInternetException implements _NoInternetException {
 
   @override
   String toString() {
-    return 'Exception.noInternetException()';
+    return 'AppException.noInternetException()';
   }
 
   @override
@@ -406,6 +407,6 @@ class _$_NoInternetException implements _NoInternetException {
   }
 }
 
-abstract class _NoInternetException implements Exception {
+abstract class _NoInternetException implements AppException {
   factory _NoInternetException() = _$_NoInternetException;
 }
