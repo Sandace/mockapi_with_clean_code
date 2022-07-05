@@ -6,14 +6,13 @@ part of 'home_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-HomeResponseModel _$HomeResponseModelFromJson(Map<String, dynamic> json) =>
-    HomeResponseModel(
+HomeResponse _$HomeResponseFromJson(Map<String, dynamic> json) => HomeResponse(
       items: (json['data'] as List<dynamic>)
-          .map((e) => ItemWithTypeModel.fromJson(e as Map<String, dynamic>))
+          .map((e) => ItemWithType.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$HomeResponseModelToJson(HomeResponseModel instance) =>
+Map<String, dynamic> _$HomeResponseToJson(HomeResponse instance) =>
     <String, dynamic>{
       'data': instance.items,
     };
