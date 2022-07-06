@@ -21,21 +21,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final DioClient dioClient = DioClient();
     return Scaffold(
-      body: Center(
-        child: TextButton(
-            onPressed: () async {
-              final usecase = getIt<GetHomeResponseUseCase>();
-              final result = await usecase(NoParams());
-
-              result.fold((l) {
-                print("failure");
-                return l;
-              }, (r) {
-                print("sucess with data");
-                return r;
-              });
-            },
-            child: Text("Api Call")),
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return SizedBox(
+            height: 150,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Container(height: 150, width: 150, child: Text("hey"));
+              },
+            ),
+          );
+        },
       ),
     );
   }

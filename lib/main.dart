@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mockapi_clean_code/feature/home/domain/usecases/get_home_response.dart';
 import 'package:mockapi_clean_code/injection.dart';
 
+import 'feature/home/presentation/bloc/home_bloc.dart';
 import 'feature/home/presentation/pages/home_page.dart';
 
 void main() {
@@ -13,12 +16,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return BlocProvider(
+      create: (_) =>
+          HomeBloc(getIt<GetHomeResponseUseCase>())..add(HomeEvent.loading()),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage(),
       ),
-      home: HomePage(),
     );
   }
 }

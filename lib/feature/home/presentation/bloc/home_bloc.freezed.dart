@@ -18,51 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loadSucess,
-    required TResult Function() loadFailure,
+    required TResult Function() loadHomePageData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
+    TResult Function()? loadHomePageData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
+    TResult Function()? loadHomePageData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(HomePageLoading value) loading,
-    required TResult Function(HomePageLoaded value) loadSucess,
-    required TResult Function(HomePageLoadFailure value) loadFailure,
+    required TResult Function(_LoadHomePageDataEvent value) loadHomePageData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
+    TResult Function(_LoadHomePageDataEvent value)? loadHomePageData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
+    TResult Function(_LoadHomePageDataEvent value)? loadHomePageData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,168 +66,47 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$HomeInitialCopyWith<$Res> {
-  factory _$$HomeInitialCopyWith(
-          _$HomeInitial value, $Res Function(_$HomeInitial) then) =
-      __$$HomeInitialCopyWithImpl<$Res>;
+abstract class _$$_LoadHomePageDataEventCopyWith<$Res> {
+  factory _$$_LoadHomePageDataEventCopyWith(_$_LoadHomePageDataEvent value,
+          $Res Function(_$_LoadHomePageDataEvent) then) =
+      __$$_LoadHomePageDataEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$HomeInitialCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
-    implements _$$HomeInitialCopyWith<$Res> {
-  __$$HomeInitialCopyWithImpl(
-      _$HomeInitial _value, $Res Function(_$HomeInitial) _then)
-      : super(_value, (v) => _then(v as _$HomeInitial));
-
-  @override
-  _$HomeInitial get _value => super._value as _$HomeInitial;
-}
-
-/// @nodoc
-
-class _$HomeInitial with DiagnosticableTreeMixin implements HomeInitial {
-  _$HomeInitial();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeEvent.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'HomeEvent.initial'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomeInitial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loadSucess,
-    required TResult Function() loadFailure,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(HomePageLoading value) loading,
-    required TResult Function(HomePageLoaded value) loadSucess,
-    required TResult Function(HomePageLoadFailure value) loadFailure,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class HomeInitial implements HomeEvent {
-  factory HomeInitial() = _$HomeInitial;
-}
-
-/// @nodoc
-abstract class _$$HomePageLoadingCopyWith<$Res> {
-  factory _$$HomePageLoadingCopyWith(
-          _$HomePageLoading value, $Res Function(_$HomePageLoading) then) =
-      __$$HomePageLoadingCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$HomePageLoadingCopyWithImpl<$Res>
+class __$$_LoadHomePageDataEventCopyWithImpl<$Res>
     extends _$HomeEventCopyWithImpl<$Res>
-    implements _$$HomePageLoadingCopyWith<$Res> {
-  __$$HomePageLoadingCopyWithImpl(
-      _$HomePageLoading _value, $Res Function(_$HomePageLoading) _then)
-      : super(_value, (v) => _then(v as _$HomePageLoading));
+    implements _$$_LoadHomePageDataEventCopyWith<$Res> {
+  __$$_LoadHomePageDataEventCopyWithImpl(_$_LoadHomePageDataEvent _value,
+      $Res Function(_$_LoadHomePageDataEvent) _then)
+      : super(_value, (v) => _then(v as _$_LoadHomePageDataEvent));
 
   @override
-  _$HomePageLoading get _value => super._value as _$HomePageLoading;
+  _$_LoadHomePageDataEvent get _value =>
+      super._value as _$_LoadHomePageDataEvent;
 }
 
 /// @nodoc
 
-class _$HomePageLoading
+class _$_LoadHomePageDataEvent
     with DiagnosticableTreeMixin
-    implements HomePageLoading {
-  _$HomePageLoading();
+    implements _LoadHomePageDataEvent {
+  _$_LoadHomePageDataEvent();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeEvent.loading()';
+    return 'HomeEvent.loadHomePageData()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'HomeEvent.loading'));
+    properties.add(DiagnosticsProperty('type', 'HomeEvent.loadHomePageData'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomePageLoading);
+        (other.runtimeType == runtimeType && other is _$_LoadHomePageDataEvent);
   }
 
   @override
@@ -254,36 +115,27 @@ class _$HomePageLoading
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loadSucess,
-    required TResult Function() loadFailure,
+    required TResult Function() loadHomePageData,
   }) {
-    return loading();
+    return loadHomePageData();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
+    TResult Function()? loadHomePageData,
   }) {
-    return loading?.call();
+    return loadHomePageData?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
+    TResult Function()? loadHomePageData,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading();
+    if (loadHomePageData != null) {
+      return loadHomePageData();
     }
     return orElse();
   }
@@ -291,290 +143,34 @@ class _$HomePageLoading
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(HomePageLoading value) loading,
-    required TResult Function(HomePageLoaded value) loadSucess,
-    required TResult Function(HomePageLoadFailure value) loadFailure,
+    required TResult Function(_LoadHomePageDataEvent value) loadHomePageData,
   }) {
-    return loading(this);
+    return loadHomePageData(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
+    TResult Function(_LoadHomePageDataEvent value)? loadHomePageData,
   }) {
-    return loading?.call(this);
+    return loadHomePageData?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
+    TResult Function(_LoadHomePageDataEvent value)? loadHomePageData,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading(this);
+    if (loadHomePageData != null) {
+      return loadHomePageData(this);
     }
     return orElse();
   }
 }
 
-abstract class HomePageLoading implements HomeEvent {
-  factory HomePageLoading() = _$HomePageLoading;
-}
-
-/// @nodoc
-abstract class _$$HomePageLoadedCopyWith<$Res> {
-  factory _$$HomePageLoadedCopyWith(
-          _$HomePageLoaded value, $Res Function(_$HomePageLoaded) then) =
-      __$$HomePageLoadedCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$HomePageLoadedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
-    implements _$$HomePageLoadedCopyWith<$Res> {
-  __$$HomePageLoadedCopyWithImpl(
-      _$HomePageLoaded _value, $Res Function(_$HomePageLoaded) _then)
-      : super(_value, (v) => _then(v as _$HomePageLoaded));
-
-  @override
-  _$HomePageLoaded get _value => super._value as _$HomePageLoaded;
-}
-
-/// @nodoc
-
-class _$HomePageLoaded with DiagnosticableTreeMixin implements HomePageLoaded {
-  _$HomePageLoaded();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeEvent.loadSucess()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'HomeEvent.loadSucess'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomePageLoaded);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loadSucess,
-    required TResult Function() loadFailure,
-  }) {
-    return loadSucess();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-  }) {
-    return loadSucess?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (loadSucess != null) {
-      return loadSucess();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(HomePageLoading value) loading,
-    required TResult Function(HomePageLoaded value) loadSucess,
-    required TResult Function(HomePageLoadFailure value) loadFailure,
-  }) {
-    return loadSucess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-  }) {
-    return loadSucess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (loadSucess != null) {
-      return loadSucess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class HomePageLoaded implements HomeEvent {
-  factory HomePageLoaded() = _$HomePageLoaded;
-}
-
-/// @nodoc
-abstract class _$$HomePageLoadFailureCopyWith<$Res> {
-  factory _$$HomePageLoadFailureCopyWith(_$HomePageLoadFailure value,
-          $Res Function(_$HomePageLoadFailure) then) =
-      __$$HomePageLoadFailureCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$HomePageLoadFailureCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res>
-    implements _$$HomePageLoadFailureCopyWith<$Res> {
-  __$$HomePageLoadFailureCopyWithImpl(
-      _$HomePageLoadFailure _value, $Res Function(_$HomePageLoadFailure) _then)
-      : super(_value, (v) => _then(v as _$HomePageLoadFailure));
-
-  @override
-  _$HomePageLoadFailure get _value => super._value as _$HomePageLoadFailure;
-}
-
-/// @nodoc
-
-class _$HomePageLoadFailure
-    with DiagnosticableTreeMixin
-    implements HomePageLoadFailure {
-  _$HomePageLoadFailure();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeEvent.loadFailure()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'HomeEvent.loadFailure'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomePageLoadFailure);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loadSucess,
-    required TResult Function() loadFailure,
-  }) {
-    return loadFailure();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-  }) {
-    return loadFailure?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loadSucess,
-    TResult Function()? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (loadFailure != null) {
-      return loadFailure();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(HomePageLoading value) loading,
-    required TResult Function(HomePageLoaded value) loadSucess,
-    required TResult Function(HomePageLoadFailure value) loadFailure,
-  }) {
-    return loadFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-  }) {
-    return loadFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(HomePageLoading value)? loading,
-    TResult Function(HomePageLoaded value)? loadSucess,
-    TResult Function(HomePageLoadFailure value)? loadFailure,
-    required TResult orElse(),
-  }) {
-    if (loadFailure != null) {
-      return loadFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class HomePageLoadFailure implements HomeEvent {
-  factory HomePageLoadFailure() = _$HomePageLoadFailure;
+abstract class _LoadHomePageDataEvent implements HomeEvent {
+  factory _LoadHomePageDataEvent() = _$_LoadHomePageDataEvent;
 }
 
 /// @nodoc
