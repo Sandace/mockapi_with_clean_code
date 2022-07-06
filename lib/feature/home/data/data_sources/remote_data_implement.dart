@@ -22,9 +22,10 @@ class RemoteDataImpl extends RemoteDataSource {
       Response response = await dioClient.client.get(baseUrl + '/api/v1/home');
       homeResponse = HomeResponse.fromJson(response.data);
 
-      print('Response Info: ${response.data}');
-      print('\n\n');
+      // print('Response Info: ${response.data}');
+      // print('\n\n');
       print('Parsed Response Info: ${homeResponse}');
+      print('\n\n');
 
       return homeResponse;
     } on DioError catch (e) {
