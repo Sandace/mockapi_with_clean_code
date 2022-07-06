@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 Widget buildListView(homedata, int typeIndex) {
   return Container(
-    height: 200,
+    height: 180,
+    padding: const EdgeInsets.only(left: 8),
     child: ListView.builder(
       // padding: const EdgeInsets.all(8),
       scrollDirection: Axis.horizontal,
@@ -17,14 +18,6 @@ Widget buildListView(homedata, int typeIndex) {
             mainAxisSize: MainAxisSize.min,
             children: [
               buildContainer(homedata, typeIndex, index),
-              // ClipRRect(
-              //   borderRadius: BorderRadius.circular(8),
-              //   child: Image.network(
-              //     homedata.banners?.items[index].imageUrl ?? '',
-              //     fit: BoxFit.fill,
-              //   ),
-              // ),
-              // Text(homedata.banners?.items[index].label ?? ''),
             ],
           ),
         );
@@ -61,7 +54,7 @@ Widget buildContainer(homedata, int typeIndex, index) {
       child: Container(
           height: 140,
           width: 140,
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(4),
           child: Column(
             children: [
               // Text("Banners"),
@@ -98,11 +91,11 @@ Widget buildContainer(homedata, int typeIndex, index) {
       child: Container(
         height: 140,
         width: 140,
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(2),
         child: Column(
           children: [
             CircleAvatar(
-              radius: 65,
+              radius: 70,
               backgroundImage: NetworkImage(
                 homedata.songs?.items[index].imageUrl ?? '',
               ),

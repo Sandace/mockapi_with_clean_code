@@ -44,11 +44,40 @@ class _HomePageState extends State<HomePage> {
 
               return ListView(
                 children: [
-                  if (s.homePageData.banners != null) Text("Banners"),
+                  const SizedBox(height: 32),
+                  if (s.homePageData.banners != null)
+                    Row(
+                      children: const [
+                        SizedBox(width: 8),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child:
+                              Text("Banners", style: TextStyle(fontSize: 16)),
+                        ),
+                      ],
+                    ),
                   buildListView(homeData, 0),
-                  if (s.homePageData.movies != null) Text("Movies"),
+                  if (s.homePageData.movies != null)
+                    Row(
+                      children: const [
+                        SizedBox(width: 9),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Movies", style: TextStyle(fontSize: 16)),
+                        ),
+                      ],
+                    ),
                   buildListView(homeData, 1),
-                  if (s.homePageData.songs != null) Text("Songs"),
+                  if (s.homePageData.songs != null)
+                    Row(
+                      children: const [
+                        SizedBox(width: 16),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Songs", style: TextStyle(fontSize: 16)),
+                        ),
+                      ],
+                    ),
                   buildListView(homeData, 2),
                 ],
               );
