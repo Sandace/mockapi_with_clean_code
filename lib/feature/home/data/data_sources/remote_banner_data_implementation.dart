@@ -8,8 +8,9 @@ import '../../../../core/exceptions/exception.dart';
 
 @LazySingleton(as: RemoteBannerDataSource)
 class RemoteBannerDataSourceImpl extends RemoteBannerDataSource {
-  final DioClient dioClient;
-  RemoteBannerDataSourceImpl({required this.dioClient});
+  final DioClient diobannerClient;
+  RemoteBannerDataSourceImpl({required this.diobannerClient});
+
   @override
   Future<BannerResponse> getBannerResponse() async {
     BannerResponse bannerResponse;
@@ -18,7 +19,7 @@ class RemoteBannerDataSourceImpl extends RemoteBannerDataSource {
 
     try {
       Response response =
-          await dioClient.client.get(baseUrl + '/api/v1/banners');
+          await diobannerClient.client.get(baseUrl + '/api/v1/banners');
       bannerResponse = BannerResponse.fromJson(response.data);
 
       // print('Response Info: ${response.data}');

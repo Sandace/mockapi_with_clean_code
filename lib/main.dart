@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mockapi_clean_code/feature/home/presentation/pages/banner_page.dart';
 import 'feature/home/domain/usecases/get_home_response.dart';
 import 'feature/home/presentation/pages/movies_page.dart';
 import 'injection.dart';
@@ -27,9 +28,10 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => HomePage(),
           '/second': (context) => MoviesPage(),
+          '/banner': (context) => BannerPage(),
         },
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
           scaffoldBackgroundColor: Colors.white,
         ),
         // home: HomePage(),

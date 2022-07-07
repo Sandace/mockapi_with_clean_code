@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mockapi_clean_code/feature/home/presentation/pages/banner_page.dart';
 import '../../domain/HomeResponse/home_response.dart';
 import '../../domain/usecases/get_home_response.dart';
 import '../widgets/listview_widget.dart';
@@ -37,8 +38,8 @@ class _HomePageState extends State<HomePage> {
         builder: (_, state) {
           // HomeResponse homeResponse;
           return state.map(
-            initial: (s) => const CircularProgressIndicator(),
-            loading: (s) => const CircularProgressIndicator(),
+            initial: (s) => const Center(child: CircularProgressIndicator()),
+            loading: (s) => const Center(child: CircularProgressIndicator()),
             loadSucess: (s) {
               final homeData = s.homePageData;
 
@@ -56,7 +57,15 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const Spacer(),
                         TextButton(
-                            onPressed: () {}, child: const Text("View all")),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => BannerPage()),
+                              );
+                              // Navigator.of(context).pushNamed('/banner');
+                            },
+                            child: const Text("View all")),
                       ],
                     ),
                   buildListView(context, homeData, 0),

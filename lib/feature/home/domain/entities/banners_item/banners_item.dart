@@ -11,7 +11,7 @@ class BannerItem extends Equatable {
   @JsonKey(name: "image")
   final String imageUrl;
 
-  @JsonKey(name: "label")
+  @JsonKey(name: "name")
   final String label;
   BannerItem({
     required this.id,

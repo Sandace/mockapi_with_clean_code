@@ -27,8 +27,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
     {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
   gh.lazySingleton<_i3.DioClient>(() => _i3.DioClient());
-  gh.lazySingleton<_i4.RemoteBannerDataSource>(
-      () => _i5.RemoteBannerDataSourceImpl(dioClient: get<_i3.DioClient>()));
+  gh.lazySingleton<_i4.RemoteBannerDataSource>(() =>
+      _i5.RemoteBannerDataSourceImpl(diobannerClient: get<_i3.DioClient>()));
   gh.lazySingleton<_i6.RemoteDataSource>(
       () => _i7.RemoteDataImpl(dioClient: get<_i3.DioClient>()));
   gh.lazySingleton<_i8.BannerRepository>(() => _i9.BannerRepositoryImpl(

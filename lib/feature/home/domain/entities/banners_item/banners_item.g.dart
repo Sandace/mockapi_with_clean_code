@@ -9,12 +9,12 @@ part of 'banners_item.dart';
 BannerItem _$BannerItemFromJson(Map<String, dynamic> json) => BannerItem(
       id: json['id'] as int,
       imageUrl: json['image'] as String,
-      label: json['label'] as String,
+      label: json['name'] as String,
     );
 
 Map<String, dynamic> _$BannerItemToJson(BannerItem instance) =>
     <String, dynamic>{
       'id': instance.id,
       'image': instance.imageUrl,
-      'label': instance.label,
+      'name': instance.label,
     };
