@@ -1,8 +1,8 @@
-import 'package:mockapi_clean_code/feature/home/data/models/HomePageData/home_page_data.dart';
-
-import '../../../../core/failures/failure.dart';
 import 'package:dartz/dartz.dart';
 
+import '../../../../core/failures/failure.dart';
+import '../../data/models/BannerResponseModel/banner_response.dart';
+
 abstract class BannerRepository {
-  Future<Either<ApiFailure, BannerPageData>> getBannerResponse();
+  Future<Either<ApiFailure, BannerResponseModel>> getBannerResponse();
 }

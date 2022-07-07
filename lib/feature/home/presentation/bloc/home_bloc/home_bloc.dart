@@ -1,11 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:mockapi_clean_code/core/models/no_params.dart';
-import 'package:mockapi_clean_code/feature/home/data/models/HomePageData/home_page_data.dart';
-import 'package:mockapi_clean_code/feature/home/domain/repository/home_repository.dart';
-import 'package:mockapi_clean_code/feature/home/domain/usecases/get_home_response.dart';
-import 'package:mockapi_clean_code/injection.dart';
+import '../../../../../core/models/no_params.dart';
+import '../../../data/models/HomePageData/home_page_data.dart';
+import '../../../domain/usecases/get_home_response.dart';
+import '../../../../../injection.dart';
 
 part 'home_bloc.freezed.dart';
 part 'home_event.dart';

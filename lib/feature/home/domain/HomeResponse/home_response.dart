@@ -2,6 +2,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:mockapi_clean_code/feature/home/domain/entities/Item_With_Types/item_with_type.dart';
+
 part 'home_response.g.dart';
 
 @JsonSerializable()

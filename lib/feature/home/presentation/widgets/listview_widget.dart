@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mockapi_clean_code/feature/home/presentation/pages/movies_page.dart';
+import '../pages/movies_page.dart';
 
 import '../../data/models/HomePageData/home_page_data.dart';
 

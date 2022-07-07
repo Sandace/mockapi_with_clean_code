@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mockapi_clean_code/core/exceptions/exception.dart';
-import 'package:mockapi_clean_code/feature/home/data/data_sources/remote_data.dart';
-import 'package:mockapi_clean_code/feature/home/domain/HomeResponse/home_response.dart';
+import '../../../../core/exceptions/exception.dart';
+import 'remote_data.dart';
+import '../../domain/HomeResponse/home_response.dart';
 
 import '../../../../core/dio_client.dart';
 

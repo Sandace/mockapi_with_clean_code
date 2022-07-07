@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mockapi_clean_code/feature/home/domain/HomeResponse/home_response.dart';
-import 'package:mockapi_clean_code/feature/home/domain/usecases/get_home_response.dart';
-import 'package:mockapi_clean_code/feature/home/presentation/widgets/listview_widget.dart';
+import '../../domain/HomeResponse/home_response.dart';
+import '../../domain/usecases/get_home_response.dart';
+import '../widgets/listview_widget.dart';
 
-import '../bloc/home_bloc.dart';
+import '../bloc/home_bloc/home_bloc.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);

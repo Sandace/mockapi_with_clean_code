@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mockapi_clean_code/feature/home/data/models/BannerResponseModel/banner_response.dart';
+import '../../data/models/BannerResponseModel/banner_response.dart';
 
 import '../../../../core/failures/failure.dart';
 import '../../../../core/models/no_params.dart';
@@ -10,12 +10,12 @@ import '../repository/banner_repository.dart';
 @lazySingleton
 class GetBannerResponseUseCase
     extends UseCase<ApiFailure, BannerResponseModel, NoParams> {
-  BannerRepository repository;
+  BannerRepository bannerRepository;
 
-  GetBannerResponseUseCase({required this.repository});
+  GetBannerResponseUseCase({required this.bannerRepository});
 
   @override
   Future<Either<ApiFailure, BannerResponseModel>> call(params) async {
-    return await repository.getBannerResponse();
+    return await bannerRepository.getBannerResponse();
   }
 }

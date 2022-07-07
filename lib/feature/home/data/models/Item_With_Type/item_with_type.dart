@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:mockapi_clean_code/feature/home/data/models/item/item.dart';
-import 'package:mockapi_clean_code/feature/home/domain/entities/Item_With_Types/item_with_type.dart';
 
-import '../../../domain/entities/item/item.dart';
+import '../../../domain/entities/Item_With_Types/item_with_type.dart';
+import '../item/item.dart';
+
 part 'item_with_type.g.dart';
 
 @JsonSerializable()

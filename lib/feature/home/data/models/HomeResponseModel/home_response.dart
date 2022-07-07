@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:mockapi_clean_code/feature/home/domain/HomeResponse/home_response.dart';
+import '../../../domain/HomeResponse/home_response.dart';
 
 import '../Item_With_Type/item_with_type.dart';
 part 'home_response.g.dart';

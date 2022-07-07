@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:mockapi_clean_code/feature/home/domain/entities/banners_item/banners_item.dart';
+import '../banners_item/banners_item.dart';
 part 'banner_response.g.dart';
 
 @JsonSerializable()

@@ -4,6 +4,7 @@ import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../item/item.dart';
+
 part 'item_with_type.g.dart';
 
 @JsonSerializable()

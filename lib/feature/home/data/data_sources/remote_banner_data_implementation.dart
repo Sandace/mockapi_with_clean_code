@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mockapi_clean_code/core/dio_client.dart';
-import 'package:mockapi_clean_code/feature/home/data/data_sources/remote_banner_data.dart';
-import 'package:mockapi_clean_code/feature/home/domain/entities/BannerResponse/banner_response.dart';
+import '../../../../core/dio_client.dart';
+import 'remote_banner_data.dart';
+import '../../domain/entities/BannerResponse/banner_response.dart';
 
 import '../../../../core/exceptions/exception.dart';
 

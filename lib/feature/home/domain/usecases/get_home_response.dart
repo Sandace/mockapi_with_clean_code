@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mockapi_clean_code/core/failures/failure.dart';
-import 'package:mockapi_clean_code/core/usecase/usecase.dart';
-import 'package:mockapi_clean_code/feature/home/data/models/HomePageData/home_page_data.dart';
-import 'package:mockapi_clean_code/feature/home/domain/repository/home_repository.dart';
+import '../../../../core/failures/failure.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../../data/models/HomePageData/home_page_data.dart';
+import '../repository/home_repository.dart';
 
 import '../../../../core/models/no_params.dart';
 

@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../../domain/entities/banners_item/banners_item.dart';
+
 part 'banners_item.g.dart';
 
 @JsonSerializable()

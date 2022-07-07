@@ -1,11 +1,14 @@
-import 'package:mockapi_clean_code/core/failures/failure.dart';
+import 'package:injectable/injectable.dart';
+
+import '../../../../core/failures/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:mockapi_clean_code/feature/home/data/data_sources/remote_banner_data.dart';
-import 'package:mockapi_clean_code/feature/home/domain/repository/banner_repository.dart';
+import '../data_sources/remote_banner_data.dart';
+import '../../domain/repository/banner_repository.dart';
 
 import '../../../../core/exceptions/exception.dart';
 import '../models/BannerResponseModel/banner_response.dart';
 
+@LazySingleton(as: BannerRepository)
 class BannerRepositoryImpl extends BannerRepository {
   RemoteBannerDataSource remoteBannerDataSource;
   BannerRepositoryImpl({required this.remoteBannerDataSource});
