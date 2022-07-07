@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mockapi_clean_code/feature/home/presentation/pages/movies_page.dart';
 
-Widget buildListView(homedata, int typeIndex) {
+import '../../data/models/HomePageData/home_page_data.dart';
+
+Widget buildListView(
+    BuildContext context, HomePageData homedata, int typeIndex) {
   return Container(
     height: 180,
     padding: const EdgeInsets.only(left: 8),
@@ -17,7 +21,7 @@ Widget buildListView(homedata, int typeIndex) {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              buildContainer(homedata, typeIndex, index),
+              buildContainer(context, homedata, typeIndex, index),
             ],
           ),
         );
@@ -26,7 +30,7 @@ Widget buildListView(homedata, int typeIndex) {
   );
 }
 
-Widget buildContainer(homedata, int typeIndex, index) {
+Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
   if (typeIndex == 0) {
     return Expanded(
       child: Container(
@@ -72,7 +76,16 @@ Widget buildContainer(homedata, int typeIndex, index) {
                     height: 150,
                     width: 70,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        if (index == 0) {
+                          Navigator.of(context).pushNamed('/second');
+                        }
+
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => MoviesPage()),
+                        // );
+                      },
                       icon: const Icon(
                         Icons.add,
                         color: Colors.white,

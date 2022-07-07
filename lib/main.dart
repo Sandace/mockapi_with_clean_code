@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mockapi_clean_code/feature/home/domain/usecases/get_home_response.dart';
+import 'package:mockapi_clean_code/feature/home/presentation/pages/movies_page.dart';
 import 'package:mockapi_clean_code/injection.dart';
 
 import 'feature/home/presentation/bloc/home_bloc.dart';
@@ -22,11 +23,16 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomePage(),
+          '/second': (context) => MoviesPage(),
+        },
         theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
         ),
-        home: HomePage(),
+        // home: HomePage(),
       ),
     );
   }

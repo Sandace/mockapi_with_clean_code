@@ -24,6 +24,7 @@ class RemoteDataImpl extends RemoteDataSource {
 
       // print('Response Info: ${response.data}');
       // print('\n\n');
+
       print('Parsed Response Info: ${homeResponse}');
       print('\n\n');
 

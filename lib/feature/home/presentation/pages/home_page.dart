@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                 return const Text("No connection");
               });
         },
-        builder: (context, state) {
+        builder: (_, state) {
           // HomeResponse homeResponse;
           return state.map(
             initial: (s) => const CircularProgressIndicator(),
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                  buildListView(homeData, 0),
+                  buildListView(context, homeData, 0),
                   if (s.homePageData.movies != null)
                     Row(
                       children: const [
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                  buildListView(homeData, 1),
+                  buildListView(context, homeData, 1),
                   if (s.homePageData.songs != null)
                     Row(
                       children: const [
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                  buildListView(homeData, 2),
+                  buildListView(context, homeData, 2),
                 ],
               );
             },
