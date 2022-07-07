@@ -12,7 +12,8 @@ Widget buildListView(
       // padding: const EdgeInsets.all(8),
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
-      itemCount: homedata.songs?.items.length,
+      itemCount: 3,
+      // itemCount: homedata.songs?.items.length,
       itemBuilder: (context, index) {
         return Container(
           // padding: const EdgeInsets.all(8),

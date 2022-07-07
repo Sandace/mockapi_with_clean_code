@@ -47,35 +47,44 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 32),
                   if (s.homePageData.banners != null)
                     Row(
-                      children: const [
-                        SizedBox(width: 8),
-                        Padding(
+                      children: [
+                        const SizedBox(width: 8),
+                        const Padding(
                           padding: EdgeInsets.all(8.0),
                           child:
                               Text("Banners", style: TextStyle(fontSize: 16)),
                         ),
+                        const Spacer(),
+                        TextButton(
+                            onPressed: () {}, child: const Text("View all")),
                       ],
                     ),
                   buildListView(context, homeData, 0),
                   if (s.homePageData.movies != null)
                     Row(
-                      children: const [
-                        SizedBox(width: 9),
-                        Padding(
+                      children: [
+                        const SizedBox(width: 9),
+                        const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text("Movies", style: TextStyle(fontSize: 16)),
                         ),
+                        const Spacer(),
+                        TextButton(
+                            onPressed: () {}, child: const Text("View all")),
                       ],
                     ),
                   buildListView(context, homeData, 1),
                   if (s.homePageData.songs != null)
                     Row(
-                      children: const [
-                        SizedBox(width: 16),
-                        Padding(
+                      children: [
+                        const SizedBox(width: 16),
+                        const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text("Songs", style: TextStyle(fontSize: 16)),
                         ),
+                        const Spacer(),
+                        TextButton(
+                            onPressed: () {}, child: const Text("View all")),
                       ],
                     ),
                   buildListView(context, homeData, 2),
