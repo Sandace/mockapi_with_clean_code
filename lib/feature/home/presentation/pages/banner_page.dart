@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mockapi_clean_code/feature/home/domain/usecases/get_banner_response.dart';
@@ -14,6 +15,7 @@ class BannerPage extends StatefulWidget {
 }
 
 class _BannerPageState extends State<BannerPage> {
+  bool _enabled = true;
   @override
   Widget build(BuildContext buildcontext) {
     return BlocProvider(
@@ -37,9 +39,11 @@ class _BannerPageState extends State<BannerPage> {
               initial: (s) => const Center(child: CircularProgressIndicator()),
               loading: (s) => const Center(child: CircularProgressIndicator()),
               loadSucess: (s) {
-                return Shimmer.fromColors(
-                  baseColor: Colors.red,
-                  highlightColor: Colors.yellow,
+                return RefreshIndicator(
+                  onRefresh: () async {
+                    BlocProvider.of<BannerBloc>(buildercontext)
+                        .add(BannerEvent.loadBannerPageData());
+                  },
                   child: ListView.builder(
                     itemCount: s.bannerPageData.items.length,
                     itemBuilder: (context, index) {

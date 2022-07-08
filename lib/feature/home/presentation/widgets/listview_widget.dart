@@ -48,7 +48,7 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
                 child: CachedNetworkImage(
                   imageUrl: (homedata.banners?.items[index].imageUrl ?? ''),
                   placeholder: (context, url) => CircularProgressIndicator(),
-                  // errorWidget: (context, url, error) => Icon(Icons.error),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
                   //(homedata.banners?.items[index].imageUrl ?? '') +
                   //     '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
                   fit: BoxFit.fill,
@@ -69,11 +69,19 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
             children: [
               // Text("Banners"),
               Stack(children: [
-                Image.network(
-                  (homedata.movies?.items[index].imageUrl ?? '') +
-                      '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
+                CachedNetworkImage(
+                  imageUrl: (homedata.movies?.items[index].imageUrl ?? ''),
+                  placeholder: (context, url) => CircularProgressIndicator(),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  //(homedata.banners?.items[index].imageUrl ?? '') +
+                  //     '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
                   fit: BoxFit.fill,
                 ),
+                // Image.network(
+                //   (homedata.movies?.items[index].imageUrl ?? '') +
+                //       '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
+                //   fit: BoxFit.fill,
+                // ),
                 Positioned(
                   right: 0,
                   // alignment: AlignmentDirectional.topEnd,
