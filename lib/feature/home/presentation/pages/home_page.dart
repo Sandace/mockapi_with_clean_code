@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final DioClient dioClient = DioClient();
     return Scaffold(
-      appBar: AppBar(title: Text('MockApiDemo')),
+      appBar: AppBar(title: const Text('MockApiDemo')),
       body: BlocConsumer<HomeBloc, HomeState>(
         listener: (context, state) {
           state.map(
@@ -81,7 +81,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const Spacer(),
                           TextButton(
-                              onPressed: () {}, child: const Text("View all")),
+                              onPressed: () {
+                                Navigator.of(context).pushNamed('/movies');
+                              },
+                              child: const Text("View all")),
                         ],
                       ),
                     buildListView(context, homeData, 1),

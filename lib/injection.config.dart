@@ -22,8 +22,9 @@ import 'feature/home/domain/repository/banner_repository.dart' as _i10;
 import 'feature/home/domain/repository/home_repository.dart' as _i13;
 import 'feature/home/domain/repository/movies_repository.dart' as _i15;
 import 'feature/home/domain/usecases/get_banner_response.dart' as _i12;
-import 'feature/home/domain/usecases/get_home_response.dart'
-    as _i17; // ignore_for_file: unnecessary_lambdas
+import 'feature/home/domain/usecases/get_home_response.dart' as _i17;
+import 'feature/home/domain/usecases/get_movies_response.dart'
+    as _i18; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -48,5 +49,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       remoteMoviesDataSource: get<_i8.RemoteMoviesDataSource>()));
   gh.lazySingleton<_i17.GetHomeResponseUseCase>(() =>
       _i17.GetHomeResponseUseCase(repository: get<_i13.HomeRepository>()));
+  gh.lazySingleton<_i18.GetMoviesResponseUseCase>(() =>
+      _i18.GetMoviesResponseUseCase(
+          moviesRepository: get<_i15.MoviesRepository>()));
   return get;
 }

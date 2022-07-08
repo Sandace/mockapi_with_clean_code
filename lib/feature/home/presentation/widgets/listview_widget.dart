@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../pages/movies_page.dart';
+import '../pages/movie_detail_page.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import '../../data/models/HomePageData/home_page_data.dart';
 
@@ -44,9 +45,12 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
               // Text("Banners"),
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Image.network(
-                  (homedata.banners?.items[index].imageUrl ?? '') +
-                      '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
+                child: CachedNetworkImage(
+                  imageUrl: (homedata.banners?.items[index].imageUrl ?? ''),
+                  placeholder: (context, url) => CircularProgressIndicator(),
+                  // errorWidget: (context, url, error) => Icon(Icons.error),
+                  //(homedata.banners?.items[index].imageUrl ?? '') +
+                  //     '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
                   fit: BoxFit.fill,
                 ),
               ),

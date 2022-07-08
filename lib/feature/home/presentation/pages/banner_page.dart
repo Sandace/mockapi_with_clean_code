@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mockapi_clean_code/feature/home/domain/usecases/get_banner_response.dart';
 import 'package:mockapi_clean_code/injection.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../bloc/banner_bloc/banner_bloc.dart';
 
@@ -13,10 +14,6 @@ class BannerPage extends StatefulWidget {
 }
 
 class _BannerPageState extends State<BannerPage> {
-  Future _refreshData() async {
-    BlocProvider.of<BannerBloc>(context).add(BannerEvent.loadBannerPageData());
-  }
-
   @override
   Widget build(BuildContext buildcontext) {
     return BlocProvider(
@@ -40,11 +37,9 @@ class _BannerPageState extends State<BannerPage> {
               initial: (s) => const Center(child: CircularProgressIndicator()),
               loading: (s) => const Center(child: CircularProgressIndicator()),
               loadSucess: (s) {
-                return RefreshIndicator(
-                  onRefresh: () async {
-                    BlocProvider.of<BannerBloc>(buildercontext)
-                        .add(BannerEvent.loadBannerPageData());
-                  },
+                return Shimmer.fromColors(
+                  baseColor: Colors.red,
+                  highlightColor: Colors.yellow,
                   child: ListView.builder(
                     itemCount: s.bannerPageData.items.length,
                     itemBuilder: (context, index) {

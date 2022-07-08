@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (context) => HomePage(),
-          '/second': (context) => MoviesPage(),
+          '/movies': (context) => MoviesPage(),
           '/banner': (context) => BannerPage(),
         },
         theme: ThemeData(
