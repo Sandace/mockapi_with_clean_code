@@ -13,10 +13,14 @@ class BannerPage extends StatefulWidget {
 }
 
 class _BannerPageState extends State<BannerPage> {
+  Future _refreshData() async {
+    BlocProvider.of<BannerBloc>(context).add(BannerEvent.loadBannerPageData());
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext buildcontext) {
     return BlocProvider(
-      create: (_) => BannerBloc(getIt<GetBannerResponseUseCase>())
+      create: (blocContext) => BannerBloc(getIt<GetBannerResponseUseCase>())
         ..add(BannerEvent.loadBannerPageData()),
       child: Scaffold(
         appBar: AppBar(title: const Text("Banners")),
@@ -31,35 +35,45 @@ class _BannerPageState extends State<BannerPage> {
               },
             );
           },
-          builder: (context, state) {
+          builder: (buildercontext, state) {
             return state.map(
               initial: (s) => const Center(child: CircularProgressIndicator()),
               loading: (s) => const Center(child: CircularProgressIndicator()),
               loadSucess: (s) {
-                return ListView.builder(
-                  itemCount: s.bannerPageData.items.length,
-                  itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          height: 200,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: Image(
-                              image: NetworkImage(
-                                  s.bannerPageData.items[index].imageUrl),
-                              alignment: Alignment.center,
-                              height: double.infinity,
-                              width: double.infinity,
-                              fit: BoxFit.fill,
+                return RefreshIndicator(
+                  onRefresh: () async {
+                    BlocProvider.of<BannerBloc>(buildercontext)
+                        .add(BannerEvent.loadBannerPageData());
+                  },
+                  child: ListView.builder(
+                    itemCount: s.bannerPageData.items.length,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            height: 200,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: Image(
+                                image: NetworkImage(
+                                  '${s.bannerPageData.items[index].imageUrl}?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
+                                ),
+                                alignment: Alignment.center,
+                                height: double.infinity,
+                                width: double.infinity,
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
-                        ),
-                        Text(s.bannerPageData.items[index].label),
-                      ],
-                    );
-                  },
+                          Text(
+                            s.bannerPageData.items[index].label,
+                            style: const TextStyle(fontSize: 16),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 );
               },
               loadFailure: (s) => const Center(

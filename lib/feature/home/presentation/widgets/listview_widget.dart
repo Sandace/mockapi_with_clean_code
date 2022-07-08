@@ -45,7 +45,8 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.network(
-                  homedata.banners?.items[index].imageUrl ?? '',
+                  (homedata.banners?.items[index].imageUrl ?? '') +
+                      '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
                   fit: BoxFit.fill,
                 ),
               ),
@@ -65,7 +66,8 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
               // Text("Banners"),
               Stack(children: [
                 Image.network(
-                  homedata.movies?.items[index].imageUrl ?? '',
+                  (homedata.movies?.items[index].imageUrl ?? '') +
+                      '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
                   fit: BoxFit.fill,
                 ),
                 Positioned(
@@ -111,7 +113,8 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
             CircleAvatar(
               radius: 70,
               backgroundImage: NetworkImage(
-                homedata.songs?.items[index].imageUrl ?? '',
+                (homedata.songs?.items[index].imageUrl ?? '') +
+                    '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
               ),
             ),
             Text(homedata.songs?.items[index].label ?? ''),

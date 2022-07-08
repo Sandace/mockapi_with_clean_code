@@ -15,10 +15,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
+  Future _refreshData() async {
+    BlocProvider.of<HomeBloc>(context).add(HomeEvent.loadHomePageData());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,61 +42,66 @@ class _HomePageState extends State<HomePage> {
             loadSucess: (s) {
               final homeData = s.homePageData;
 
-              return ListView(
-                children: [
-                  const SizedBox(height: 32),
-                  if (s.homePageData.banners != null)
-                    Row(
-                      children: [
-                        const SizedBox(width: 8),
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child:
-                              Text("Banners", style: TextStyle(fontSize: 16)),
-                        ),
-                        const Spacer(),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BannerPage()),
-                              );
-                              // Navigator.of(context).pushNamed('/banner');
-                            },
-                            child: const Text("View all")),
-                      ],
-                    ),
-                  buildListView(context, homeData, 0),
-                  if (s.homePageData.movies != null)
-                    Row(
-                      children: [
-                        const SizedBox(width: 9),
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text("Movies", style: TextStyle(fontSize: 16)),
-                        ),
-                        const Spacer(),
-                        TextButton(
-                            onPressed: () {}, child: const Text("View all")),
-                      ],
-                    ),
-                  buildListView(context, homeData, 1),
-                  if (s.homePageData.songs != null)
-                    Row(
-                      children: [
-                        const SizedBox(width: 16),
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text("Songs", style: TextStyle(fontSize: 16)),
-                        ),
-                        const Spacer(),
-                        TextButton(
-                            onPressed: () {}, child: const Text("View all")),
-                      ],
-                    ),
-                  buildListView(context, homeData, 2),
-                ],
+              return RefreshIndicator(
+                onRefresh: _refreshData,
+                child: ListView(
+                  children: [
+                    const SizedBox(height: 32),
+                    if (s.homePageData.banners != null)
+                      Row(
+                        children: [
+                          const SizedBox(width: 8),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child:
+                                Text("Banners", style: TextStyle(fontSize: 16)),
+                          ),
+                          const Spacer(),
+                          TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BannerPage()),
+                                );
+                                // Navigator.of(context).pushNamed('/banner');
+                              },
+                              child: const Text("View all")),
+                        ],
+                      ),
+                    buildListView(context, homeData, 0),
+                    if (s.homePageData.movies != null)
+                      Row(
+                        children: [
+                          const SizedBox(width: 9),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child:
+                                Text("Movies", style: TextStyle(fontSize: 16)),
+                          ),
+                          const Spacer(),
+                          TextButton(
+                              onPressed: () {}, child: const Text("View all")),
+                        ],
+                      ),
+                    buildListView(context, homeData, 1),
+                    if (s.homePageData.songs != null)
+                      Row(
+                        children: [
+                          const SizedBox(width: 16),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child:
+                                Text("Songs", style: TextStyle(fontSize: 16)),
+                          ),
+                          const Spacer(),
+                          TextButton(
+                              onPressed: () {}, child: const Text("View all")),
+                        ],
+                      ),
+                    buildListView(context, homeData, 2),
+                  ],
+                ),
               );
             },
             loadFailure: (s) => const Center(

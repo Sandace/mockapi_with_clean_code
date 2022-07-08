@@ -14,7 +14,18 @@ class _MoviesPageState extends State<MoviesPage> {
       appBar: AppBar(
         title: const Text("Action Movies"),
       ),
-      body: const Center(child: Text("Action movies")),
+      body: Center(
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          child: Image(
+            image: NetworkImage('https://picsum.photos/140/140'),
+            alignment: Alignment.center,
+            height: double.infinity,
+            width: double.infinity,
+            fit: BoxFit.fill,
+          ),
+        ),
+      ),
     );
   }
 }
