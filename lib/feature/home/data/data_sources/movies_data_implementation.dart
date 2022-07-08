@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import 'package:mockapi_clean_code/core/dio_client.dart';
 import 'package:mockapi_clean_code/core/failures/failure.dart';
 import 'package:mockapi_clean_code/feature/home/data/data_sources/movies_data.dart';
 import 'package:mockapi_clean_code/feature/home/domain/entities/MoviesResponse/movies_response.dart';
 
+@LazySingleton(as: MoviesDataSource)
 class MoviesDataSourceImpl extends MoviesDataSource {
   final DioClient dioMoviesClient;
   MoviesDataSourceImpl(this.dioMoviesClient);
