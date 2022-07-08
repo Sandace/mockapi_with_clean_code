@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:mockapi_clean_code/feature/home/data/data_sources/movies_data.dart';
 import 'package:mockapi_clean_code/feature/home/data/models/MovieResponseModel/movies_response_model.dart';
 import 'package:mockapi_clean_code/core/failures/failure.dart';
@@ -6,6 +7,7 @@ import 'package:mockapi_clean_code/feature/home/domain/repository/movies_reposit
 
 import '../../../../core/exceptions/exception.dart';
 
+@LazySingleton(as: MoviesRepository)
 class MoviesRepositoryImpl extends MoviesRepository {
   RemoteMoviesDataSource remoteMoviesDataSource;
   MoviesRepositoryImpl({required this.remoteMoviesDataSource});
