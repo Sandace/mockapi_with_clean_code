@@ -93,7 +93,7 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
                     child: IconButton(
                       onPressed: () {
                         if (index == 0) {
-                          Navigator.of(context).pushNamed('/second');
+                          Navigator.of(context).pushNamed('/detailPage');
                         }
 
                         // Navigator.push(
