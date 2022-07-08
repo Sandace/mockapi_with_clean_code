@@ -19,7 +19,7 @@ class SongsRemoteDataSourceImpl extends SongsRemoteDataSource {
 
     try {
       Response response =
-          await dioSongsClient.client.get(baseUrl + 'api/v1/songs');
+          await dioSongsClient.client.get(baseUrl + '/api/v1/songs');
       songsResponse = SongsResponse.fromJson(response.data);
 
       print('Parsed Response Info: ${songsResponse}');

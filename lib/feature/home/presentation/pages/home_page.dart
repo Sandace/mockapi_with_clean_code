@@ -99,7 +99,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const Spacer(),
                           TextButton(
-                              onPressed: () {}, child: const Text("View all")),
+                              onPressed: () {
+                                Navigator.of(context).pushNamed('/songs');
+                              },
+                              child: const Text("View all")),
                         ],
                       ),
                     buildListView(context, homeData, 2),

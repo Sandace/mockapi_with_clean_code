@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mockapi_clean_code/feature/home/presentation/pages/banner_page.dart';
 import 'package:mockapi_clean_code/feature/home/presentation/pages/movie_detail_page.dart';
+import 'package:mockapi_clean_code/feature/home/presentation/pages/songs_page.dart';
 import 'feature/home/domain/usecases/get_home_response.dart';
 import 'feature/home/presentation/pages/movies_page.dart';
 import 'injection.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
           '/movies': (context) => MoviesPage(),
           '/banner': (context) => BannerPage(),
           '/detailPage': (context) => MoviesDetailPage(),
+          '/songs': (context) => SongsPage(),
         },
         theme: ThemeData(
           primarySwatch: Colors.red,

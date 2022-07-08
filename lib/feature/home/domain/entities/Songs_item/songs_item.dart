@@ -7,7 +7,7 @@ part 'songs_item.g.dart';
 @JsonSerializable()
 class SongItem extends Equatable {
   @JsonKey(name: "id")
-  final String id;
+  final int id;
 
   @JsonKey(name: "image")
   final String imageUrl;

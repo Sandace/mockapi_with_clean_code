@@ -7,7 +7,7 @@ part of 'songs_item.dart';
 // **************************************************************************
 
 SongItem _$SongItemFromJson(Map<String, dynamic> json) => SongItem(
-      id: json['id'] as String,
+      id: json['id'] as int,
       imageUrl: json['image'] as String,
       name: json['name'] as String,
       artist: json['artist'] as String,
