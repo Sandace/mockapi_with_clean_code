@@ -5,10 +5,10 @@ import 'package:mockapi_clean_code/core/failures/failure.dart';
 import 'package:mockapi_clean_code/feature/home/data/data_sources/movies_data.dart';
 import 'package:mockapi_clean_code/feature/home/domain/entities/MoviesResponse/movies_response.dart';
 
-@LazySingleton(as: MoviesDataSource)
-class MoviesDataSourceImpl extends MoviesDataSource {
+@LazySingleton(as: RemoteMoviesDataSource)
+class MoviesRemoteDataSourceImpl extends RemoteMoviesDataSource {
   final DioClient dioMoviesClient;
-  MoviesDataSourceImpl(this.dioMoviesClient);
+  MoviesRemoteDataSourceImpl(this.dioMoviesClient);
 
   final baseUrl = Uri.encodeFull('https://62bd85febac21839b6054332.mockapi.io');
   @override
