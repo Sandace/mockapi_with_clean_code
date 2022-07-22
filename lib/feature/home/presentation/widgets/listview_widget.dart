@@ -125,8 +125,9 @@ Widget buildContainer(BuildContext context, homedata, int typeIndex, index) {
             CircleAvatar(
               radius: 70,
               backgroundImage: NetworkImage(
-                (homedata.songs?.items[index].imageUrl ?? '') +
-                    '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
+                homedata.songs?.items[index].imageUrl ?? '',
+                // (homedata.songs?.items[index].imageUrl ?? '') +
+                //     '?id=${DateTime.now().millisecondsSinceEpoch.toString()}',
               ),
             ),
             Text(homedata.songs?.items[index].label ?? ''),
